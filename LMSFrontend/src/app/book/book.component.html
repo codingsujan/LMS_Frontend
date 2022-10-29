@@ -1,0 +1,23 @@
+<div style="text-align: center;">
+<button type="button" (click)="getDetails()">get Book Details </button>
+</div>
+<br><br><br>
+    <table class="table" border ="1" style="margin-left: auto;margin-right: auto;"  *ngIf="books">
+        <thead>
+          
+            <tr>
+                <th>Book Id    </th>
+                <th>Book Name</th>
+                <th>User Id</th>
+                <th>User Name</th>
+               
+    
+            </tr >
+<tr *ngFor="let book of books">
+    <td>{{book.bookId}}</td>
+    <td>{{book.bookName}}</td>
+    <td>{{book.user.id}}</td>
+    <td>{{book.user.name}}</td>
+</tr>
+</thead>
+</table>
